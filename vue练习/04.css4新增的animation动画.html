@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation的使用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: relative;
+            width: 200px;
+            height:200px;
+            background-color: cyan;
+            /* 调用动画 */
+            /* 
+              第一个参数：动画名称
+              第二个参数：每一次动画执行时间（S||MS）
+              第三个参数：动画执行速率
+              第四个参数：第一次动画延迟时间
+              第五个参数：动画执行次数（infinite:代表动画执行无数次）
+             */
+            animation: erha 3s linear 0s 1;
+        }
+
+        /* animation动画声明部分 */
+        /* webkit代表谷歌浏览器私有前缀：这个动画只能在谷歌浏览器中使用 */
+        /*keyframes该规则用来创建动画，后面是方法名*/
+        @-webkit-keyframes erha {
+            from {
+                left: 0px;
+                background-color: cyan;
+                border-radius: 0px 0px 0px 0px;
+                font-size: 16px;
+                text-align: left;
+                line-height: 0px;
+            }
+
+            to {
+                left: 600px;
+                background-color: red;
+                font-size: 30px;
+                border-radius: 100px 100px 100px 100px;
+                text-align: center;
+                line-height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>我爱你</div>
+</body>
+
+</html>
