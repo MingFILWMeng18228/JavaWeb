@@ -1,0 +1,84 @@
+<!-- 清除固定样式 -->
+*{
+    margin: 0;
+    padding: o;
+ }
+
+ div{
+    /*相对定位*/
+    position: relative;
+    width: 600px;
+    height: 400px;
+    /*边框*/
+    border:1px solid black;
+    margin: 50px auto;
+    /*内容会被修剪，并且其余内容不可见*/
+    overflow: hidden;
+ }
+ul{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    /*消除样式*/
+    list-style: none;
+}
+
+img{
+    width: 600px;
+    height: 400px;
+}
+
+ul li{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    left: 600px;
+
+}
+
+.current{
+   left: 0px; 
+}
+
+.lbtn{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0px;
+    top: 40%;
+}
+
+.rbtn{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 0px;
+    top: 40%;
+}
+
+ol {
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    left: 38%;
+    bottom: 5px;
+    list-style: none;
+}
+
+ol li {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 3px;
+}
+
+.cur {
+    background-color: green;
+    /*突出显示*/
+    transform: scale(1.2);
+}

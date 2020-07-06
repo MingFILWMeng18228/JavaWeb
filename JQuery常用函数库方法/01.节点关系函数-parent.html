@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>节点关系函数</title>
+	<!-- 利用JQ需要通过script标签进行引包 -->
+	<script src="js/jQuery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 500px;
+			height: 100px;
+			border: 1px solid black;
+			margin: 100px auto;
+		}
+		p{
+			float: left;
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			margin-right: 10px;
+
+		}
+	</style>
+</head>
+<body>
+     <div>
+     	<p></p>
+     	<p></p>
+     	<p></p>
+     	<p></p>
+     	
+     </div>
+</body>
+</html>
+<script>
+	//给p标签绑定单击事件，要他们的父元素div背景颜色为青色
+   $("p").click(function(){
+   	 // 第一种方式
+   	  $("div").css({
+   	  	"background":"cyan"
+   	  });
+
+   // 	  //第二种方式
+   // 	  $("p").parent().css({
+   // 	  	"background":"cyan"
+   // 	  })
+    })
+    
+</script>
