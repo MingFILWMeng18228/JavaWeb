@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>class选择器</title>
+	<style type="text/css">
+		.current{
+			font-size: 30px;
+			background-color: cyan;
+		}
+		.cur{
+			color: skyblue;
+			font-size: 18px;
+		}
+
+		input[name="123"]{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+   <p class="current">祖国最强大了，是我们每个国民的骄傲！</p>
+   <p>祖国最强大了，是我们每个国民的骄傲！</p>
+   <p class="current">祖国最强大了，是我们每个国民的骄傲！</p>
+   <p>祖国最强大了，是我们每个国民的骄傲！</p>
+   <div>今天是安陆:<span class="cur">2020年6月21日20:57：30</span></div>
+
+   <!-- 属性选择器 ,一般不用-->
+   <input type="text" name="123"/>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.box{
+   width: 666;
+   height: 666;
+   background-color: red;
+
+}
+
+#cur{
+	font-size: 20px;
+	color: green;
+	text-align: center;
+}

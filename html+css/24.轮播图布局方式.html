@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>轮播图布局</title>
+    <style type="text/css">
+        /* 默认样式清除 */
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+              /*相对定位 ，相对自己的起始位置进行便宜，并且起始位置被人不能占用 */
+              position: relative;
+              width:520px;
+              height: 280px;
+              /*设置外边框:边框大小、实线、颜色设置*/
+              border:1px solid red;
+              /*设置定位元素*/
+              left:400px;  
+              top:100px;
+              /* 如果子元素超出父元素部分隐藏*/
+              overflow: hidden;  
+        }
+        ul{
+        	/*绝对定位：按照已经定位的父元素进行定位*/
+             position: absolute;
+             /*去除列表默认样式（前面黑色小球）*/
+             list-style: none;
+             width:520px;
+             height: 280px;
+        }
+        .leftbtn{
+             position:absolute;
+             width:60px;
+             height:30px;
+             background:black;
+             left:0px;
+             top:120px;
+             color:white;
+             /*文本居中*/
+             text-align:center;
+             /*行高设置，让文字垂直方向居中：一般和高度一样*/
+             line-height:30px;
+             /*设置点上去的小手*/
+             cursor:pointer;
+             opacity: .8;
+        }
+        .rightbtn{
+             position: absolute;
+             width:60px;
+             height: 30px;
+             background:black;
+             right:0px;
+             top:120px;
+             color:white;
+             text-align:center;
+             line-height:30px;
+             cursor:pointer;
+             opacity: .8;
+        }
+        ol{
+             position: absolute;
+             width:200px;
+             height:25px;
+             list-style: none;
+             left:35%;
+             bottom:5px;
+        }
+        /* 后代选择器 */
+        ol li{
+        	/*左侧浮动*/
+            float:left;
+            width:25px;
+            height: 25px;
+            background:black;
+            color:white;
+            /* 变为圆球 */
+            border-radius:12.5px;
+            text-align:center;
+            line-height:25px;
+            margin-right:5px;
+        }
+        .cur{
+             background:skyblue;
+             /* 进行缩放 */
+             transform:scale(1.2);
+        }
+    </style>
+</head>
+<body>
+     <div class="box">
+           <!--有序列表去做显示图片  -->
+             <ul>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+                  <li><img src="1.jpg" alt="" /></li>
+             </ul>
+             <!-- 做左右按钮 -->
+             <div class="leftbtn">left</div>
+             <div class="rightbtn">right</div>
+             <!-- 分页器 -->
+             <ol>
+                 <li class="cur">1</li>
+                 <li>2</li>
+                 <li>3</li>
+                 <li>4</li>
+                 <li>5</li>
+             </ol>
+     </div>
+</body>
+</html>
