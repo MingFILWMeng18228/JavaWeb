@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery独有选择器</title>
+	<script src="js/jQuery.mini.js"></script>
+</head>
+<body>
+	<div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+    <div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+    <div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+    <div>我是中国人</div>
+    <div>我是巴基斯坦人</div>
+    <div>我是泰国人</div>
+    <div>我是日本人</div>
+
+
+</body>
+</html>
+<script >
+	//下面是jquery函数库独有的选择器
+	//：first可以获取某一匹配标签的第一个元素
+	// $("div:first").css({
+	// 	"background":"red"
+	// });
+	// //:last,可以获取某一个匹配标签最后一个元素
+	// $("div:last").css({
+	// 	"background":"yellow"
+	// });
+
+	// //：even，代表偶数选择器
+	// $("div:even").css({
+	// 	"background":"cyan"
+	// });
+
+	// //:odd,代表奇数选择器
+	// $("div:odd").css({
+	// 	"background":"blue"
+	// });
+
+	//:gt(index),大于选择器
+	$("div:gt(5)").css({
+		"color":"red"
+	});
+
+	//:lt(index),小于选择器
+	$("div:lt(6)").css({
+		"color":"blue"
+	});
+</script>

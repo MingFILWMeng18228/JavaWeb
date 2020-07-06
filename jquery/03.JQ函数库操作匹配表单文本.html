@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>匹配表单文本</title>
+	<script src="js/jQuery.mini.js"></script>
+</head>
+<body>
+	<p>
+      <input type="text" value="我是一个文本输入框">   
+    </p>
+    <div>
+        我是一个程序员，正在提升自己
+    </div>
+</body>
+</html>
+<script >
+    //操作表单元素文本，利用的val方法
+    //获取表单元素文本
+    console.log($("input").val());
+    //重新设置表单元素文本
+    $("input").val("请输入你喜欢的小姐姐");
+    //操作非表单元素文本，利用html方法
+    console.log($("div").html());
+    //获取非表单元素文本
+    $("div").html("修改非表单元素文本!")
+</script>
