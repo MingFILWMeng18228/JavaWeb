@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-test和v-html的区别</title>
+    <!-- 引入Vue源码（引包） -->
+    <script src="./js/vue.min.js"></script>
+</head>
+
+<body>
+    <!-- 页面标签布局 -->
+    <div id="app">
+        <h1>下面的指令用来操作文本</h1>
+        <p v-text="msg"></p>
+        <hr>
+        <!-- 上面指令的简写 -->
+        <p>{{msg}}</p>
+        <!-- v-test和v-html的区别 -->
+        <p v-html="msg"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    //Vue框架对外暴露了一个Vue构造函数
+    //通过这个Vue构造函数，创建实例
+    var vm = new Vue({
+        //el:挂载点设置（将Vue实例）和结构层中标签进行挂在
+        el: "#app",
+        //实例数据来源
+        data: {
+            msg:"<a href='http:www.baidu.com' target='_blank'>百度</a>"
+        }
+    });
+    
+</script>
